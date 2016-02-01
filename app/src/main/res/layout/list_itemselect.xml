@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/background_list_itemselect"
+  android:descendantFocusability="blocksDescendants"
+  android:padding="@dimen/general"
+  >
+
+  <!-- Image Icon -->
+  <com.michiganhackers.diabeticons.Util.SquareImageView
+    android:id="@+id/icon"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:src="@drawable/ic_launcher"
+    android:layout_gravity="center_vertical"
+    />
+
+  <TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="25dp"
+    android:text="Diabeticon Text"
+    android:layout_toRightOf="@id/icon"
+    android:textSize="20sp"
+    />
+
+  <ImageButton
+      android:id="@+id/btn_fav"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:padding="10dp"
+      android:layout_centerVertical="true"
+      android:layout_alignParentRight="true"
+      android:layout_marginRight="20dp"
+      android:scaleType="fitStart"
+      android:src="@drawable/favoritebtn_list"
+      android:background="@color/transparent"/>
+  
+</RelativeLayout>

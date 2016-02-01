@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.michiganhackers.diabeticons" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name_short"
+        android:theme="@style/AppTheme"
+        android:name=".Core.MyApplication">
+        <activity
+            android:name=".Core.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SubPages.SendActivity"
+            android:label="@string/send"
+            android:parentActivityName=".Core.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Core.MainActivity"
+                />
+        </activity>
+        <activity
+            android:name=".SubPages.AboutActivity"
+            android:label="@string/who_are_we"
+            android:parentActivityName=".Core.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Core.MainActivity"
+                />
+        </activity>
+        <activity
+            android:name=".SubPages.FeedbackActivity"
+            android:label="@string/send_us_message"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".Core.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Core.MainActivity"
+                />
+        </activity>
+        <activity
+            android:name=".SubPages.ShareAppActivity"
+            android:label="@string/share_with_friends"
+            android:parentActivityName=".Core.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Core.MainActivity"
+                />
+        </activity>
+
+
+        <provider
+            android:name="com.michiganhackers.diabeticons.Util.AssetsProvider"
+            android:authorities="com.michiganhackers.diabeticons"
+            android:grantUriPermissions="true"
+            android:exported="true" />
+    </application>
+
+</manifest>
