@@ -52,14 +52,11 @@ public class MyApplication extends Application {
                 // Cache the path, for later use
                 curIcon.setPath(path);
 
-                // Get the simplified, displayable name (no .filetype, no nyNameIsFrankenstein)
+                // Get the simplified, displayable name (no .filetype)
                 String simplerName = files[i].substring(0, files[i].indexOf('.'));
-                // Looks for a lower case followed by an upper case, adds space between
-                // Source: http://stackoverflow.com/questions/4886091/insert-space-after-capital-letter
-                String simplerNameFinal = simplerName.replaceAll("(\\p{Ll})(\\p{Lu})","$1 $2");
 
                 // Save the easier-to-read title
-                curIcon.setTitle(simplerNameFinal);
+                curIcon.setTitle(simplerName);
 
                 // Finally put the icon into the list for later use
                 mIconList.add(curIcon);
