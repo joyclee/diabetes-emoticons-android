@@ -25,19 +25,33 @@
     android:layout_marginLeft="25dp"
     android:text="Diabeticon Text"
     android:layout_toRightOf="@id/icon"
-    android:textSize="20sp"
+    android:textSize="17sp"
     />
 
-  <ImageButton
-      android:id="@+id/btn_fav"
-      android:layout_width="50dp"
-      android:layout_height="50dp"
-      android:padding="10dp"
-      android:layout_centerVertical="true"
-      android:layout_alignParentRight="true"
-      android:layout_marginRight="20dp"
-      android:scaleType="fitStart"
-      android:src="@drawable/favoritebtn_list"
-      android:background="@color/transparent"/>
+    <ImageButton
+        android:id="@+id/btn_send"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:layout_margin="0dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/send"
+        android:background="@color/transparent"/>
+
+    <ImageButton
+        android:id="@+id/btn_fav"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/btn_send"
+        android:scaleType="fitStart"
+        android:src="@drawable/favoritebtn_list"
+        android:background="@color/transparent"/>
   
 </RelativeLayout>

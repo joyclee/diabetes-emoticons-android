@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.michiganhackers.diabeticons.Core.MyApplication;
+import com.michiganhackers.diabeticons.Util.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -79,6 +80,7 @@ public class FavListAdapter extends BaseAdapter {
             holder.icon = (ImageView) row.findViewById(R.id.icon);
             holder.title = (TextView) row.findViewById(R.id.title);
             holder.favBtn = (ImageButton) row.findViewById(R.id.btn_fav);
+            holder.sendBtn = (ImageButton) row.findViewById(R.id.btn_send);
 
             // Make the row reuse the ViewHolder
             row.setTag(holder);
@@ -89,7 +91,7 @@ public class FavListAdapter extends BaseAdapter {
         }
 
         // Set the title and icon of this item according to the position
-        Icon curIcon = mAppReference.getAllIcons().get(getIconIndex(position));
+        final Icon curIcon = mAppReference.getAllIcons().get(getIconIndex(position));
 
         holder.title.setText(curIcon.getTitle());
         holder.icon.setImageDrawable(curIcon.getImage());
@@ -99,20 +101,27 @@ public class FavListAdapter extends BaseAdapter {
         holder.favBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(v.isSelected()) {
+                if (v.isSelected()) {
                     // Now unselected
                     v.setSelected(false);
 
                     // Let the entire app know of the change
                     mAppReference.setFavoriteState(getIconIndex(position), false);
-                }
-                else {
+                } else {
                     // Now selected
                     v.setSelected(true);
 
                     // Let the entire app know of the change
                     mAppReference.setFavoriteState(getIconIndex(position), true);
                 }
+            }
+        });
+
+        // Set the send button to send the current image
+        holder.sendBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Util.sendImage(mContext, curIcon);
             }
         });
 
@@ -123,5 +132,6 @@ public class FavListAdapter extends BaseAdapter {
         public ImageView icon;
         public TextView title;
         public ImageButton favBtn;
+        public ImageButton sendBtn;
     }
 }

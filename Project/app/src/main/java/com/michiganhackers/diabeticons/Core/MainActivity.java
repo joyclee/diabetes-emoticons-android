@@ -20,9 +20,6 @@ import java.util.ArrayList;
  * Created by Edwin on 15/02/2015.
  */
 public class MainActivity extends ActionBarActivity implements IconListChangeSubscriber {
-
-    // Declaring Your View and Variables
-
     Toolbar toolbar;
     ViewPager pager;
     ViewPagerAdapter adapter;
@@ -39,7 +36,6 @@ public class MainActivity extends ActionBarActivity implements IconListChangeSub
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         // Creating The Toolbar and setting it as the Toolbar for the activity
 
@@ -72,9 +68,13 @@ public class MainActivity extends ActionBarActivity implements IconListChangeSub
 
         // Setting the ViewPager For the SlidingTabsLayout
         tabs.setViewPager(pager);
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
 
-
+        ((MyApplication) getApplication()).restoreListData();
     }
 
     @Override
@@ -89,6 +89,13 @@ public class MainActivity extends ActionBarActivity implements IconListChangeSub
         super.onPause();
 
         ((MyApplication) getApplication()).removeFavoriteChangeNotifier();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        ((MyApplication) getApplication()).saveListData();
     }
 
     @Override

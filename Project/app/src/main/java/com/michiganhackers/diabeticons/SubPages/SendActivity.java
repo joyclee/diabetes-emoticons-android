@@ -76,7 +76,7 @@ public class SendActivity extends ActionBarActivity {
       sendButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-          sendImage();
+          Util.sendImage(SendActivity.this, mCurIcon);
         }
       });
 
@@ -111,6 +111,7 @@ public class SendActivity extends ActionBarActivity {
   }
 
   // Sends an intent to share the image that was passed to this Activity
+  /*
   private void sendImage() {
     // Create the uri path to the image itself [thank you AssetsProvider Utils class]
     Uri imageUri = Uri.parse("content://com.michiganhackers.diabeticons/" + mCurIcon.getPath());
@@ -125,4 +126,5 @@ public class SendActivity extends ActionBarActivity {
         Intent.createChooser(shareIntent, getResources().getText(R.string.share_chooser_title))
     );
   }
+  */
 }
