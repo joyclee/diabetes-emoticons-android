@@ -76,7 +76,7 @@ public class SendActivity extends ActionBarActivity {
       sendButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-          Util.sendImage(SendActivity.this, mCurIcon);
+          Util.sendImage(SendActivity.this, mCurIcon.getImage());
         }
       });
 

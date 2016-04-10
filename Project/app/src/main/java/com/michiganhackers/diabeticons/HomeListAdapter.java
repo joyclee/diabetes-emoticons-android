@@ -102,7 +102,7 @@ public class HomeListAdapter extends BaseAdapter {
         holder.sendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Util.sendImage(mContext, curIcon);
+                Util.sendImage(mContext, curIcon.getImage());
             }
         });
 
