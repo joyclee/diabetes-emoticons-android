@@ -3,6 +3,7 @@ package com.michiganhackers.diabeticons.SubPages;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -13,7 +14,7 @@ import com.michiganhackers.diabeticons.Util.IntentStarter;
 /**
  * Created by jawad on 21/10/15.
  */
-public class ShareAppActivity extends ActionBarActivity {
+public class ShareAppActivity extends AppCompatActivity {
     Toolbar mToolbar;
 
     // Well, these don't really need to be cached at the moment...

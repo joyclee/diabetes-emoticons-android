@@ -2,6 +2,7 @@ package com.michiganhackers.diabeticons.SubPages;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.webkit.WebSettings;
@@ -14,7 +15,7 @@ import com.michiganhackers.diabeticons.Util.CheckNetworkConnection;
 /**
  * Created by jawad on 21/10/15.
  */
-public class AboutActivity extends ActionBarActivity {
+public class AboutActivity extends AppCompatActivity {
     private static final String LOGTAG = "MD/AboutActivity";
     private static final String URL = "http://www.healthdesignby.us/";
     Toolbar mToolbar;

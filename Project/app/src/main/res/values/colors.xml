@@ -5,6 +5,8 @@
     <color name="ColorPrimaryDark">#D1C054</color>
     <color name="tabsScrollColor">#A39226</color>
 
+    <color name="listItem_textColor">#757575</color>
+
     <!-- Material Design Base Colors -->
     <!-- http://www.google.com/design/spec/style/color.html#color-color-palette -->
     <!-- Indigo theme -->

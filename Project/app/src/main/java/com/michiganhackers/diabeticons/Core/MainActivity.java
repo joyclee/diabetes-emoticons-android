@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,7 +20,7 @@ import java.util.ArrayList;
 /**
  * Created by Edwin on 15/02/2015.
  */
-public class MainActivity extends ActionBarActivity implements IconListChangeSubscriber {
+public class MainActivity extends AppCompatActivity implements IconListChangeSubscriber {
     Toolbar toolbar;
     ViewPager pager;
     ViewPagerAdapter adapter;

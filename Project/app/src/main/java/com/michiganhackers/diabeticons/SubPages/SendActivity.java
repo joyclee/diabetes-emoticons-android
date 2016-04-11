@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
@@ -25,7 +26,7 @@ import java.io.IOException;
  *
  * Shows off an image and title, while giving options to send it off
  */
-public class SendActivity extends ActionBarActivity {
+public class SendActivity extends AppCompatActivity {
   private static final String LOGTAG = "MD/SendActivity";
 
   Toolbar mToolbar;

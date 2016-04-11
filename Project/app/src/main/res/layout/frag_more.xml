@@ -28,7 +28,8 @@
             android:layout_gravity="center"
             android:text="@string/about_us"
             android:layout_marginLeft="20dp"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/listItem_textColor"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/layout_feedback"
@@ -53,7 +54,8 @@
             android:layout_gravity="center"
             android:text="@string/feedback"
             android:layout_marginLeft="35dp"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/listItem_textColor"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/layout_share"
@@ -78,6 +80,7 @@
             android:layout_gravity="center"
             android:text="@string/share_app"
             android:layout_marginLeft="35dp"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/listItem_textColor"/>
     </LinearLayout>
 </LinearLayout>
