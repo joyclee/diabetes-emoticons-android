@@ -31,6 +31,6 @@
 
     <!-- Share app strings -->
     <string name="share_app_basemessage">Check out this cool app:</string>
-    <string name="share_app_link">bit.ly/diabetesemoticons</string>
+    <string name="share_app_link">http://www.healthdesignby.us/diabetesemoticons</string>
     <string name="share_app_email_subject">Diabetes Emoticons!</string>
 </resources>
